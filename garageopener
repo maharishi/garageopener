@@ -1,0 +1,8 @@
+config garage 'mqtt'
+	option server '{{MQTTBROKER}}'
+ 	option port '1883'
+ 	option topic 'garage'
+
+config garage 'gpio'
+	option garage1pin '14'
+	option garage2pin '13'
