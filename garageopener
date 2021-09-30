@@ -1,5 +1,5 @@
 config garage 'mqtt'
-	option server '{{MQTTBROKER}}'
+	option server '${{ secrets.MQTTBROKER }}'
  	option port '1883'
  	option topic 'garage'
 
