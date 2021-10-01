@@ -68,6 +68,7 @@ while read -r line; do
 		fi
 	fi
 	if [ "$line" = "garageReboot" ]; then
+		mosquitto_pub -h "$mqttServer" -p "$mqttPort" -t "garageState" -m "omegaRebooting"
 		reboot
 	fi
 done < "$backpipe"
