@@ -1,8 +1,14 @@
+
 config garage 'mqtt'
-	option server '${{ secrets.MQTTBROKER }}'
- 	option port '1883'
- 	option topic 'garage'
+	option server '192.168.1.3'
+	option port '1883'
+	option topic 'garage'
 
 config garage 'gpio'
-	option garage1pin '14'
+	option garage1pin '17'
 	option garage2pin '13'
+
+config garage 'state'
+	option garage2 'closed'
+	option garage1 'open'
+
